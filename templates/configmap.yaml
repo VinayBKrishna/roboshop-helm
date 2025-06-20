@@ -4,5 +4,5 @@ metadata:
   name: {{ .Values.component_name }}
 data:
   {{- range $key,$value := .Values.configMapData }}
-    {{ $key }}: {{ $value | quote }}
+  {{ $key }}: {{ $value | quote }}
   {{- end }}
